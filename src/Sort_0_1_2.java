@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-/**
+/** Dutch National flag problem also known as
  *You are given an array consisting of zeros , ones and twos
  **sort the array in same order , don't create new array
  *Input
@@ -19,13 +19,13 @@ import java.util.Arrays;
 
 public class Sort_0_1_2 {
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 
         int valTemp[] ={1,0,1,0,1,1};
 
         int[] temp = sort_it( valTemp, 6);
         System.out.println(Arrays.toString(temp));
-    }
+    }*/
 
 
     public static int[] sort_it(int[] arr , int n){
