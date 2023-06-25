@@ -1,12 +1,61 @@
+import java.util.Arrays;
+
 public class SmallPrograms {
 
     public static void main(String [] args){
 
         //fibbonaic_series();
         //System.out.println("countval"+ CountOnes(11));
-        System.out.println("countval"+ reverNumber(123));
+        //System.out.println("countval"+ reverNumber(123));
+       // System.out.println("Value: "+ flipBitwise_Number(5));
+        int a[]= {3,4,51,2,1};
+        reverseArray(a,5);
+    }
 
 
+    /**
+     *
+     * reverse without using whole loop
+     *
+     *
+     */
+
+    static void reverseArray(int[] arr , int n){
+
+        int start =0;
+        int end = n-1;
+
+        while(start < end){
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end]= temp;
+            start++;
+            end--;
+        }
+        System.out.println(Arrays.toString(arr));
+
+    }
+
+    /***
+     * complemnet an integer number , flip 0 and 1 in an number
+     *
+     *  5 = 101  to 2 = 010
+     *
+     */
+
+
+    static int flipBitwise_Number( int x){
+        int ans =0;
+        int mask =0;
+        int n =x;
+
+        while(n != 0){
+            mask = (mask << 1 )| 1;
+            n = n>> 1;
+        }
+
+        ans = (~x) & mask;
+       return ans;
     }
 
 
