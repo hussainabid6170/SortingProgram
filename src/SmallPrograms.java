@@ -8,14 +8,39 @@ public class SmallPrograms {
         //System.out.println("countval"+ CountOnes(11));
         //System.out.println("countval"+ reverNumber(123));
        // System.out.println("Value: "+ flipBitwise_Number(5));
-        int a[]= {3,4,51,2,1};
-        reverseArray(a,5);
+       //  int a[]= {3,4,51,2,1};
+        //reverseArray(a,5);
+
+        int a[]= {2,3,1,6,3,6,2};
+        System.out.println("Value: "+uniqueValue(a,7));
     }
 
 
     /**
      *
-     * reverse without using whole loop
+     * find unique number in an array where N is equal to (2M+1).
+     * Number of elements are present twice and one number is present once
+     *
+     *
+     *
+     */
+
+    static int uniqueValue(int[] arr, int n){
+       int uniqueVal =0;
+        for(int i=0; i<n; i++){
+            uniqueVal = uniqueVal ^ arr[i];
+
+        }
+
+
+       return uniqueVal;
+
+    }
+
+
+    /**
+     *
+     * reverse without using whole loop, smart reverse of array
      *
      *
      */
@@ -61,7 +86,7 @@ public class SmallPrograms {
 
     /**
      *
-     * reverse a number and check if its with in the max integer limit
+     * reverse a number and check if its with in the max integer limit otherwise return zero.
      */
      static int reverNumber (int n){
          int ans =0;
