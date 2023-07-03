@@ -10,9 +10,38 @@ public class SmallPrograms {
        // System.out.println("Value: "+ flipBitwise_Number(5));
        //  int a[]= {3,4,51,2,1};
         //reverseArray(a,5);
+       // int a[]= {2,3,1,6,3,6,2};
+       // System.out.println("Value: "+uniqueValue(a,7));
 
-        int a[]= {2,3,1,6,3,6,2};
-        System.out.println("Value: "+uniqueValue(a,7));
+        int a[]= { 5,1,2,3,4,2};
+         System.out.println("Value: "+duplicateArray(a));
+    }
+
+
+    /** Duplicate in Array
+     *
+     *given an array ARR of size N containing number between 1 and N-1 at least once.
+     * There is a single integer value that is present in the array twice.
+     * Task is to find the duplicate integer value present in the array
+     *
+     * Arr = { 5,1,2,3,4,2}
+     * output = 2
+     * Explanation: xor all the arrays then xor with the number limit
+     *
+     */
+
+    static int duplicateArray( int[] arr){
+        int duplicateVal = 0;
+
+        for (int i =0; i< arr.length; i++){
+            duplicateVal = duplicateVal ^ arr[i] ;
+        }
+
+        for (int i = 1; i < arr.length; i++) {
+            duplicateVal = duplicateVal ^ i ;
+        }
+
+        return duplicateVal;
     }
 
 
